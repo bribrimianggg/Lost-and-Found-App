@@ -3,7 +3,7 @@
 **Full project title:** ParSU-LostAndFound: Campus Property Logging and Ownership Verification System  
 **Organization:** Partido State University, Goa Campus — Security and Prefect of Discipline Office  
 **Subject:** WS1 · Web Systems and Technologies · Week 14  
-**Group members:** **Mia R. Casino && Eric P. Tanay**
+**Group members:** **Mia R. Casiño && Eric P. Tanay**
 
 ## What this is
 A design package and **two static HTML/CSS mock-ups** based on our existing MySQL `parsu_lostfound` database. It helps campus visitors find logged property, while authorized office staff record found items and process ownership claims. No backend, saving, login, search, or deletion works yet. Those are for later weeks.
