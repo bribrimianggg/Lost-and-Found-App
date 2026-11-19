@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ParSU Lost and Found — static found items list design preview">
+    <title>Found Items | ParSU Lost &amp; Found</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Shared stylesheet for both pages -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="topbar">
+        <div class="container nav-inner">
+            <a href="list.html" class="brand" aria-label="ParSU Lost and Found, home">
+                <img
+                    src="parsu-logo.png"
+                    alt="Partido State University logo"
+                    class="brand-logo"
+                    width="50"
+                    height="50"
+                >
+                <span>
+                    <strong>ParSU</strong>
+                    <small>LOST &amp; FOUND</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="list.html" aria-current="page">Found Items</a>
+                <a href="form.html" class="nav-cta">+ Log Item</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+
+        <!-- Page heading -->
+        <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Goa Campus · Property Registry
+        </div>
+
+        <div class="page-title-row">
+            <div>
+                <h1>Found Items</h1>
+                <p class="page-subtitle">
+                    Check recently found belongings and where they are kept.
+                </p>
+            </div>
+            <a href="form.html" class="btn btn-primary desktop-add">
+                + Log a Found Item
+            </a>
+        </div>
+
+        <!-- Summary cards (sample data) -->
+        <section class="metrics" aria-label="Sample registry statistics">
+            <div class="metric">
+                <span class="metric-kicker">Total items</span>
+                <strong>05</strong>
+                <small>Classroom sample records</small>
+            </div>
+            <div class="metric">
+                <span class="metric-kicker">In storage</span>
+                <strong>04</strong>
+                <small>Available for claiming</small>
+            </div>
+            <div class="metric">
+                <span class="metric-kicker">Released</span>
+                <strong>01</strong>
+                <small>With approved claim</small>
+            </div>
+        </section>
+
+        <!-- Found items registry -->
+        <section class="panel" aria-labelledby="records-heading">
+            <div class="panel-head">
+                <div>
+                    <h2 id="records-heading">
+                        Item Registry
+                        <span class="count-pill">5 records</span>
+                    </h2>
+                </div>
+                <a href="form.html" class="btn btn-secondary small-only">
+                    + Log Item
+                </a>
+            </div>
+
+            <!-- Search and filter: visual preview only -->
+            <div class="filters">
+                <div class="search-group">
+                    <label for="search">Search items</label>
+                    <input
+                        id="search"
+                        name="search"
+                        type="search"
+                        placeholder="Search item or place..."
+                        aria-describedby="preview-note"
+                    >
+                </div>
+
+                <div class="select-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option>All categories</option>
+                        <option>ID Card</option>
+                        <option>Flash Drive</option>
+                        <option>Umbrella</option>
+                        <option>Textbook</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="preview-note" id="preview-note">
+                Design preview only: search, filters, Edit and Delete do not change data yet.
+            </p>
+
+            <!-- Responsive table: each row becomes a card on a small screen -->
+            <div class="table-wrap">
+                <table class="records-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Found</th>
+                            <th scope="col">Storage</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Item #101 -->
+                        <tr>
+                            <td data-label="Item">
+                                <span class="item-code">#101</span>
+                                <strong>Black USB Drive</strong>
+                                <span class="cell-subtext">Campus Library · 12 Nov 2026, 9:30 AM</span>
+                            </td>
+                            <td data-label="Category">Flash Drive</td>
+                            <td data-label="Found">Campus Library</td>
+                            <td data-label="Storage">Security Cabinet A</td>
+                            <td data-label="Status">
+                                <span class="status status-stored">Stored</span>
+                            </td>
+                            <td data-label="Actions">
+                                <div class="actions">
+                                    <button type="button" class="action-link" aria-label="Edit Black USB Drive (preview only)">Edit</button>
+                                    <button type="button" class="action-disabled" disabled aria-label="Delete Black USB Drive disabled">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Item #102 -->
+                        <tr>
+                            <td data-label="Item">
+                                <span class="item-code">#102</span>
+                                <strong>Blue Umbrella</strong>
+                                <span class="cell-subtext">Building A · 13 Nov 2026, 2:00 PM</span>
+                            </td>
+                            <td data-label="Category">Umbrella</td>
+                            <td data-label="Found">Building A</td>
+                            <td data-label="Storage">Security Shelf B</td>
+                            <td data-label="Status">
+                                <span class="status status-stored">Stored</span>
+                            </td>
+                            <td data-label="Actions">
+                                <div class="actions">
+                                    <button type="button" class="action-link" aria-label="Edit Blue Umbrella (preview only)">Edit</button>
+                                    <button type="button" class="action-disabled" disabled aria-label="Delete Blue Umbrella disabled">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Item #103 -->
+                        <tr>
+                            <td data-label="Item">
+                                <span class="item-code">#103</span>
+                                <strong>Database Textbook</strong>
+                                <span class="cell-subtext">Computer Laboratory · 14 Nov 2026, 11:00 AM</span>
+                            </td>
+                            <td data-label="Category">Textbook</td>
+                            <td data-label="Found">Computer Laboratory</td>
+                            <td data-label="Storage">Security Cabinet A</td>
+                            <td data-label="Status">
+                                <span class="status status-released">Released</span>
+                            </td>
+                            <td data-label="Actions">
+                                <div class="actions">
+                                    <button type="button" class="action-link" aria-label="Edit Database Textbook (preview only)">Edit</button>
+                                    <button type="button" class="action-disabled" disabled aria-label="Delete Database Textbook disabled">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Item #104 -->
+                        <tr>
+                            <td data-label="Item">
+                                <span class="item-code">#104</span>
+                                <strong>Student ID Card</strong>
+                                <span class="cell-subtext">Student Center · 16 Nov 2026, 8:15 AM</span>
+                            </td>
+                            <td data-label="Category">ID Card</td>
+                            <td data-label="Found">Student Center</td>
+                            <td data-label="Storage">Security Shelf B</td>
+                            <td data-label="Status">
+                                <span class="status status-stored">Stored</span>
+                            </td>
+                            <td data-label="Actions">
+                                <div class="actions">
+                                    <button type="button" class="action-link" aria-label="Edit Student ID Card (preview only)">Edit</button>
+                                    <button type="button" class="action-disabled" disabled aria-label="Delete Student ID Card disabled">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Item #105 -->
+                        <tr>
+                            <td data-label="Item">
+                                <span class="item-code">#105</span>
+                                <strong>Silver USB Drive</strong>
+                                <span class="cell-subtext">Lecture Hall B · 17 Nov 2026, 1:20 PM</span>
+                            </td>
+                            <td data-label="Category">Flash Drive</td>
+                            <td data-label="Found">Lecture Hall B</td>
+                            <td data-label="Storage">Security Cabinet A</td>
+                            <td data-label="Status">
+                                <span class="status status-stored">Stored</span>
+                            </td>
+                            <td data-label="Actions">
+                                <div class="actions">
+                                    <button type="button" class="action-link" aria-label="Edit Silver USB Drive (preview only)">Edit</button>
+                                    <button type="button" class="action-disabled" disabled aria-label="Delete Silver USB Drive disabled">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Example empty state when no matching records are found -->
+            <details class="empty-example">
+                <summary>Show planned empty-state message</summary>
+                <div class="empty-box">
+                    <strong>No items found</strong>
+                    <p>Try a different keyword or category, or log a new found item.</p>
+                </div>
+            </details>
+        </section>
+
+    </main>
+</body>
+</html>
